@@ -24,12 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "League\\Skeleton\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "League\\Skeleton\\Test\\": "tests"
+            "Spatie\\LittleGateKeeper\\": "src"
         }
     },
     "scripts": {
