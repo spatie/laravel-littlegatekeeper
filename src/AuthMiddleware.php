@@ -12,17 +12,17 @@ class AuthMiddleware
      * @var  \Spatie\LittleGateKeeper\Authenticator
      */
     protected $authenticator;
-    
+
     /**
      * @var  \Illuminate\Routing\Redirector
      */
     protected $redirector;
-    
+
     /**
      * @var  \Illuminate\Contracts\Config\Repository
      */
     protected $config;
-    
+
     /**
      * @param  \Spatie\LittleGateKeeper\Authenticator $authenticator
      * @param  \Illuminate\Routing\Redirector $redirector
@@ -48,5 +48,4 @@ class AuthMiddleware
 
         return $next($request);
     }
-
 }
