@@ -9,6 +9,21 @@ use Illuminate\Routing\Redirector;
 class AuthMiddleware
 {
     /**
+     * @var  \Spatie\LittleGateKeeper\Authenticator
+     */
+    protected $authenticator;
+    
+    /**
+     * @var  \Illuminate\Routing\Redirector
+     */
+    protected $redirector;
+    
+    /**
+     * @var  \Illuminate\Contracts\Config\Repository
+     */
+    protected $config;
+    
+    /**
      * @param  \Spatie\LittleGateKeeper\Authenticator $authenticator
      * @param  \Illuminate\Routing\Redirector $redirector
      * @param  \Illuminate\Contracts\Config\Repository $config
