@@ -56,7 +56,7 @@ class Authenticator
     {
         $valid = $this->validateCredentials($credentials);
 
-        if ($success) {
+        if ($valid) {
             $this->login();
             return true;
         }
@@ -65,7 +65,7 @@ class Authenticator
     }
 
     /**
-     * @param  array $credentials
+     * @param  array $credentials  Format: ['username' => '...', 'password' => '...']
      * @return bool
      */
     protected function validateCredentials($credentials)
