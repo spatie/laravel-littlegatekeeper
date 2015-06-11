@@ -70,7 +70,7 @@ Route::get('/', ['middleware' => 'littlegatekeeper', function () {
 
 If a user isn't logged in, he will be redirected to the url set in the config file (`littlegatekeeper.authRoute`).
 
-### Authentcator methods
+### Authenticator methods
 
 ```php
 /**
@@ -101,7 +101,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email sebastian@spatie.be instead of using the issue tracker.
+If you discover any security related issues, please email freek@spatie.be instead of using the issue tracker.
 
 ## Credits
 
