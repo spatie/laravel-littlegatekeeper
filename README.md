@@ -43,7 +43,6 @@ Start by registering the package's the service provider and facade:
 Next, publish the config files:
 
 ```bash
-// L5
 $ php artisan vendor:publish --provider="Spatie\LittleGateKeeper\LittleGateKeeperServiceProvider" --tag="config"
 ```
 
