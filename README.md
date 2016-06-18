@@ -12,12 +12,6 @@ Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all
 
 ## Install
 
-Via Composer
-
-``` bash
-$ composer require spatie/laravel-littlegatekeeper
-```
-
 You can install the package via Composer:
 
 ```bash
