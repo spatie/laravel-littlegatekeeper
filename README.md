@@ -40,7 +40,7 @@ Next, publish the config files:
 $ php artisan vendor:publish --provider="Spatie\LittleGateKeeper\LittleGateKeeperServiceProvider" --tag="config"
 ```
 
-Finally, register the middleware filter:
+Finally, register the middleware:
 
 ```php
 // app/Http/Kernel.php
@@ -55,7 +55,7 @@ protected $routeMiddleware = [
 
 First set up the username and password in your configuration file.
 
-You can protect your routes with the route filter: 
+You can protect your routes by applying the middleware:
 
 ```php
 Route::get('/', ['middleware' => 'littlegatekeeper', function () {
