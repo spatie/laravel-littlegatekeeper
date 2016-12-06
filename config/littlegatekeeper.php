@@ -9,5 +9,5 @@ return [
     'sessionKey' => 'littlegatekeeper.loggedin',
 
     // The route to which the middleware redirects if a user isn't authenticated
-    'authRoute' => url('login'),
+    'authRoute' => 'login',
 ];
