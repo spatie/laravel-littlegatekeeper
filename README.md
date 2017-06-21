@@ -26,7 +26,7 @@ You can install the package via Composer:
 $ composer require spatie/laravel-littlegatekeeper
 ```
 
-Start by registering the package's the service provider and facade:
+Start by registering the package's the service provider:
 
 ```php
 // config/app.php (L5)
@@ -34,11 +34,6 @@ Start by registering the package's the service provider and facade:
 'providers' => [
   // ...
   'Spatie\LittleGateKeeper\LittleGateKeeperServiceProvider',
-],
-
-'aliases' => [
-  // ...
-  'LittleGateKeeper' => 'Spatie\LittleGateKeeper\LittleGateKeeperFacade',
 ],
 ```
 
