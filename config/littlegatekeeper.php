@@ -2,8 +2,8 @@
 
 return [
     // Login credentials
-    'username' => 'username',
-    'password' => 'password',
+    'username' => env('GATEKEEPER_USERNAME', 'default_username'),
+    'password' => env('GATEKEEPER_PASSWORD', 'default_password'),
 
     // The key as which the littlegatekeeper session is stored
     'sessionKey' => 'littlegatekeeper.loggedin',
