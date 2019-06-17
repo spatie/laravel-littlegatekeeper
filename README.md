@@ -56,7 +56,14 @@ protected $routeMiddleware = [
 
 ## Usage
 
-First set up the username and password in your configuration file.
+First set up the username and password in your configuration file or .env file
+
+In your .env file add:
+```php
+// ...
+GATEKEEPER_USERNAME=Choose_your_username
+GATEKEEPER_PASSWORD=Choose_your_secret_password
+```
 
 You can protect your routes by applying the middleware:
 
