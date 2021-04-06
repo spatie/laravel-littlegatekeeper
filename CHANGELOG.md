@@ -1,6 +1,10 @@
 # Changelog
 
-All Notable changes to `laravel-littlegatekeeper` will be documented in this file
+All notable changes to `laravel-littlegatekeeper` will be documented in this file
+
+## 1.1.2
+
+- Laravel Octane Compatibility #16
 
 ## 1.1.1
 
