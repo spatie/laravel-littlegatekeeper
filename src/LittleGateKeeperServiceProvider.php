@@ -32,13 +32,14 @@ class LittleGateKeeperServiceProvider extends ServiceProvider
 
         $this->app->instance(
             Authenticator::class,
-            new Authenticator(
-                $this->app->config->get('littlegatekeeper.username'),
-                $this->app->config->get('littlegatekeeper.password'),
-                $this->app->config->get('littlegatekeeper.sessionKey'),
-                $this->app->make(Session::class)
-            )
-        );
+             function ($app) {
+                return new Authenticator(
+                   $app->config->get('littlegatekeeper.username'),
+                   $app->config->get('littlegatekeeper.password'),
+                   $app->config->get('littlegatekeeper.sessionKey'),
+                   $app->make(Session::class)
+                )
+             });
 
         $this->app->alias(Authenticator::class, 'littlegatekeeper');
     }
