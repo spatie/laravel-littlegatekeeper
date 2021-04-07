@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-littlegatekeeper` will be documented in this file
 
+## 1.1.3
+
+- Fix syntax error (#17)
+
 ## 1.1.2
 
 - Laravel Octane Compatibility #16
