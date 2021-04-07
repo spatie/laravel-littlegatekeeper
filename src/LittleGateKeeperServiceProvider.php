@@ -38,7 +38,7 @@ class LittleGateKeeperServiceProvider extends ServiceProvider
                    $app->config->get('littlegatekeeper.password'),
                    $app->config->get('littlegatekeeper.sessionKey'),
                    $app->make(Session::class)
-                )
+                );
              });
 
         $this->app->alias(Authenticator::class, 'littlegatekeeper');
