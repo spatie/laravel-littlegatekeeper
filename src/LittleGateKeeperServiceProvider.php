@@ -30,16 +30,16 @@ class LittleGateKeeperServiceProvider extends ServiceProvider
            __DIR__.'/../config/littlegatekeeper.php', 'littlegatekeeper'
         );
 
-        $this->app->instance(
+        $this->app->bind(
             Authenticator::class,
-             function ($app) {
+            function ($app) {
                 return new Authenticator(
                    $app->config->get('littlegatekeeper.username'),
                    $app->config->get('littlegatekeeper.password'),
                    $app->config->get('littlegatekeeper.sessionKey'),
                    $app->make(Session::class)
                 );
-             });
+            }, true);
 
         $this->app->alias(Authenticator::class, 'littlegatekeeper');
     }
