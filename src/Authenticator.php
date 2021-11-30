@@ -34,10 +34,10 @@ class Authenticator
      */
     public function __construct($username, $password, $sessionKey, Session $session)
     {
-        $this->username   = $username;
-        $this->password   = $password;
+        $this->username = $username;
+        $this->password = $password;
         $this->sessionKey = $sessionKey;
-        $this->session    = $session;
+        $this->session = $session;
     }
 
     /**
@@ -58,6 +58,7 @@ class Authenticator
 
         if ($valid) {
             $this->login();
+
             return true;
         }
 
@@ -70,7 +71,7 @@ class Authenticator
      */
     protected function validateCredentials($credentials)
     {
-        if (!isset($credentials['username']) || !isset($credentials['password'])) {
+        if (! isset($credentials['username']) || ! isset($credentials['password'])) {
             return false;
         }
 
