@@ -24,7 +24,7 @@ class TestCase extends Orchestra
         $this->app['config']->set('littlegatekeeper.sessionKey', 'littlegatekeeper.loggedin');
         $this->app['config']->set('littlegatekeeper.authRoute', '/login');
 
-        $this->app['router']->get('/', function() {
+        $this->app['router']->get('/', function () {
             return 'hello world';
         })->middleware(AuthMiddleware::class);
 
