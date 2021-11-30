@@ -31,8 +31,8 @@ class AuthMiddleware
     public function __construct(Authenticator $authenticator, Redirector $redirector, Config $config)
     {
         $this->authenticator = $authenticator;
-        $this->redirector    = $redirector;
-        $this->config        = $config;
+        $this->redirector = $redirector;
+        $this->config = $config;
     }
 
     /**
