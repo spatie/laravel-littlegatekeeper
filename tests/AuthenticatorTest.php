@@ -24,4 +24,18 @@ class AuthenticatorTest extends TestCase
         $this->session->put('littlegatekeeper.loggedin', 'true');
         $this->get('/')->assertOk();
     }
+
+    /** @test */
+    public function it_sets_the_session_key_after_authorizing()
+    {
+        $this->authenticator->attempt(['username' => 'user', 'password' => 'pass']);
+        $this->get('/')->assertOk();
+    }
+
+    /** @test */
+    public function it_does_not_set_the_session_key_after_authorizing_with_incorrect_credentials()
+    {
+        $this->authenticator->attempt(['username' => 'baduser', 'password' => 'badpass']);
+        $this->get('/')->assertRedirect('/login');
+    }
 }
