@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-littlegatekeeper` will be documented in this file
 
+## 2.0.1 - 2022-01-19
+
+- support Laravel 9
+
 ## 2.0.0 - 2021-11-30
 
 ## What's Changed
