@@ -17,10 +17,10 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "illuminate/session": "^8.74"
+        "illuminate/session": "^8.74|^9.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.23",
+        "orchestra/testbench": "^6.23|^7.0",
         "phpunit/phpunit": "^9.5"
     },
     "autoload": {
@@ -37,9 +37,6 @@
         "test": "phpunit"
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        },
         "laravel": {
             "providers": [
                 "Spatie\\LittleGateKeeper\\LittleGateKeeperServiceProvider"
