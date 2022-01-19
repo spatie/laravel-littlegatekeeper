@@ -42,5 +42,7 @@
                 "Spatie\\LittleGateKeeper\\LittleGateKeeperServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
