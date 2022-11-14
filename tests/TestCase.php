@@ -10,12 +10,12 @@ use Spatie\LittleGateKeeper\LittleGateKeeperServiceProvider;
 class TestCase extends Orchestra
 {
     /** @var \Illuminate\Contracts\Session\Session */
-    protected $session;
+    public $session;
 
     /** @var \Spatie\LittleGateKeeper\Authenticator */
-    protected $authenticator;
+    public $authenticator;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 

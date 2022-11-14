@@ -1,41 +1,22 @@
 <?php
 
-namespace Spatie\LittleGateKeeper\Test;
+it('denies access without a username and password provided')
+    ->tap(fn () => $this->session->forget('littlegatekeeper.loggedin'))
+    ->get('/')->assertRedirect('/login');
 
-class AuthenticatorTest extends TestCase
-{
-    /** @test */
-    public function it_denies_access_without_a_username_and_password_provided()
-    {
-        $this->session->forget('littlegatekeeper.loggedin');
-        $this->get('/')->assertRedirect('/login');
-    }
+it('succeeds authorization attempt with correct user and password')
+    ->tap(fn () => $this->session->put('littlegatekeeper.loggedin', 'true'))
+    ->expect(fn () => $this->authenticator->attempt(['username' => 'user', 'password' => 'pass']))
+    ->toBeTrue();
 
-    /** @test */
-    public function it_succeeds_authorization_attempt_with_correct_user_and_pass()
-    {
-        $this->session->put('littlegatekeeper.loggedin', 'true');
-        $this->assertTrue($this->authenticator->attempt(['username' => 'user', 'password' => 'pass']));
-    }
+it('allows access with a username and password provided')
+    ->tap(fn () => $this->session->put('littlegatekeeper.loggedin', 'true'))
+    ->get('/')->assertOk();
 
-    /** @test */
-    public function it_allows_access_with_a_username_and_password_provided()
-    {
-        $this->session->put('littlegatekeeper.loggedin', 'true');
-        $this->get('/')->assertOk();
-    }
+it('sets the session key after authorizing')
+    ->tap(fn () => $this->authenticator->attempt(['username' => 'user', 'password' => 'pass']))
+    ->get('/')->assertOk();
 
-    /** @test */
-    public function it_sets_the_session_key_after_authorizing()
-    {
-        $this->authenticator->attempt(['username' => 'user', 'password' => 'pass']);
-        $this->get('/')->assertOk();
-    }
-
-    /** @test */
-    public function it_does_not_set_the_session_key_after_authorizing_with_incorrect_credentials()
-    {
-        $this->authenticator->attempt(['username' => 'baduser', 'password' => 'badpass']);
-        $this->get('/')->assertRedirect('/login');
-    }
-}
+it('does not set the session key after authorizing with incorrect credentials')
+    ->tap(fn () => $this->authenticator->attempt(['username' => 'baduser', 'password' => 'badpass']))
+    ->get('/')->assertRedirect('/login');
