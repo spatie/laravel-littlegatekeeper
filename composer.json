@@ -35,7 +35,7 @@
         }
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "pest"
     },
     "extra": {
         "laravel": {
