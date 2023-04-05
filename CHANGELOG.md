@@ -2,6 +2,29 @@
 
 All notable changes to `laravel-littlegatekeeper` will be documented in this file
 
+## 2.0.2 - 2023-04-05
+
+### What's Changed
+
+- Bump dependabot/fetch-metadata from 1.1.1 to 1.2.0 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/26
+- Bump dependabot/fetch-metadata from 1.2.0 to 1.2.1 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/27
+- Bump dependabot/fetch-metadata from 1.2.1 to 1.3.0 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/29
+- Bump dependabot/fetch-metadata from 1.3.0 to 1.3.1 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/32
+- Bump dependabot/fetch-metadata from 1.3.1 to 1.3.3 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/33
+- Bump dependabot/fetch-metadata from 1.3.3 to 1.3.4 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/34
+- Bump dependabot/fetch-metadata from 1.3.4 to 1.3.5 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/37
+- Refactor tests to Pest by @alexmanase in https://github.com/spatie/laravel-littlegatekeeper/pull/38
+- Laravel 10.x Compatibility by @laravel-shift in https://github.com/spatie/laravel-littlegatekeeper/pull/39
+- Bump dependabot/fetch-metadata from 1.3.5 to 1.3.6 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/40
+
+### New Contributors
+
+- @dependabot made their first contribution in https://github.com/spatie/laravel-littlegatekeeper/pull/26
+- @alexmanase made their first contribution in https://github.com/spatie/laravel-littlegatekeeper/pull/38
+- @laravel-shift made their first contribution in https://github.com/spatie/laravel-littlegatekeeper/pull/39
+
+**Full Changelog**: https://github.com/spatie/laravel-littlegatekeeper/compare/2.0.1...2.0.2
+
 ## 2.0.1 - 2022-01-19
 
 - support Laravel 9
