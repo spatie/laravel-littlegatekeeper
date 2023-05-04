@@ -75,7 +75,7 @@ class Authenticator
             return false;
         }
 
-        return ($credentials['username'] === $this->username && $credentials['password'] === $this->password);
+        return hash_equals($this->username, $credentials['username']) && hash_equals($this->password, $credentials['password']);
     }
 
     protected function login()
