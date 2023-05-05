@@ -2,6 +2,19 @@
 
 All notable changes to `laravel-littlegatekeeper` will be documented in this file
 
+## 2.0.3 - 2023-05-05
+
+### What's Changed
+
+- Bump dependabot/fetch-metadata from 1.3.6 to 1.4.0 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/42
+- Fix vulnerability to timing attacks  by @felixdorn in https://github.com/spatie/laravel-littlegatekeeper/pull/43
+
+### New Contributors
+
+- @felixdorn made their first contribution in https://github.com/spatie/laravel-littlegatekeeper/pull/43
+
+**Full Changelog**: https://github.com/spatie/laravel-littlegatekeeper/compare/2.0.2...2.0.3
+
 ## 2.0.2 - 2023-04-05
 
 ### What's Changed
