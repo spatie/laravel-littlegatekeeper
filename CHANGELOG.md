@@ -2,6 +2,16 @@
 
 All notable changes to `laravel-littlegatekeeper` will be documented in this file
 
+## 2.0.4 - 2024-12-11
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 1.4.0 to 1.5.1 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/44
+* Bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/45
+* Bump dependabot/fetch-metadata from 1.6.0 to 2.2.0 by @dependabot in https://github.com/spatie/laravel-littlegatekeeper/pull/52
+
+**Full Changelog**: https://github.com/spatie/laravel-littlegatekeeper/compare/2.0.3...2.0.4
+
 ## 2.0.3 - 2023-05-05
 
 ### What's Changed
