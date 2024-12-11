@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.0",
         "illuminate/session": "^8.74|^9.0|^10.0|^11.0"
     },
     "require-dev": {
