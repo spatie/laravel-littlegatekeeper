@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-littlegatekeeper` will be documented in this file
 
+## 2.0.6 - 2026-02-21
+
+Support Laravel 13
+
 ## 2.0.5 - 2025-03-21
 
 ### What's Changed
