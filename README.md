@@ -33,16 +33,7 @@ You can install the package via Composer:
 $ composer require spatie/laravel-littlegatekeeper
 ```
 
-Start by registering the package's the service provider:
-
-```php
-// config/app.php (L5)
-
-'providers' => [
-  // ...
-  'Spatie\LittleGateKeeper\LittleGateKeeperServiceProvider',
-],
-```
+The service provider is auto-discovered by Laravel, so no manual registration is needed.
 
 Next, publish the config files:
 
@@ -50,7 +41,21 @@ Next, publish the config files:
 $ php artisan vendor:publish --provider="Spatie\LittleGateKeeper\LittleGateKeeperServiceProvider" --tag="config"
 ```
 
-Finally, register the middleware:
+Finally, register the `littlegatekeeper` middleware alias.
+
+On Laravel 11 and higher, you do this in `bootstrap/app.php`:
+
+```php
+// bootstrap/app.php
+
+->withMiddleware(function (Middleware $middleware) {
+    $middleware->alias([
+        'littlegatekeeper' => \Spatie\LittleGateKeeper\AuthMiddleware::class,
+    ]);
+})
+```
+
+On Laravel 10, register the alias in `app/Http/Kernel.php`:
 
 ```php
 // app/Http/Kernel.php
